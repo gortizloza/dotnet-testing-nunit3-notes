@@ -63,8 +63,8 @@ Assert.That(a, Is.EqualTo(b));
 ```
 Classes are reference types:
 ```C#
-var a = LoanTerm(2);
-var b = LoanTerm(2);
+var a = new LoanTerm(2);
+var b = new LoanTerm(2);
 Assert.That(a, Is.EqualTo(b)); 
 // Will fail unless Equals method is overriden with custom logic.
 ``` 
