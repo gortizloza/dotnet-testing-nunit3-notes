@@ -114,7 +114,7 @@ Assert.That(collection, Has.Exactly(1)
 	  .Property("OtherPropertyName").GreaterThan(0);
 ```
 In a type safe way:
-```
+```C#
 Assert.That(collection, Has.Exactly(1)
 	.Matches<TypeOfItemsInCollection>(
 		item => item.PropertyOne == "x" &&
@@ -217,7 +217,7 @@ public class EmailValidationTestData
 }
 ```
 Then the test data class can be use in a test with the `TestCaseSource` attribute:
-```
+```C#
 [Test]
 [TestCaseSource(typeof(EmailValidationTestData), nameof(EmailValidationTestData.TestCases))]
 public void ValidateAnEmail_Centralized(string email, bool expectToBe)
