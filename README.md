@@ -257,7 +257,7 @@ __^test@xmail.com,false
 testxmail.com,false
 test@xmailco.m,false
 ```
-Return data as `IEnumerable` (or a proper NuGet package for handling more complex csv files):
+Return data as `IEnumerable` (use a proper NuGet package for handling more complex csv files):
 ```C#
 public class EmailValidationCsvData
 {
