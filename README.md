@@ -79,7 +79,7 @@ Assert.That(a, Is.SameAs(b));
 
 ###  Custom failure message
 * To add a custom failure message to an assertion... &rarr; Add a string as 3rd parameter to the `That()` method, e.g. 
-```
+```C#
 Assert.That(a, Is.EqualTo(b), "Custom error message");
 ``` 
 *Use with caution, test methods name should provide enough explanation.*
@@ -95,19 +95,19 @@ Assert.That(a, Is.EqualTo(0.33).Within(10).Percent);
 
 ### Asserting on Collections
 Collections contains exactly `n` items &rarr; 
-```
+```C#
 Assert.That(collection, Has.Exactly(n).Items);
 ```
 Collections contains not duplicate items &rarr; 
-```
+```C#
 Assert.That(collection, Is.Unique);
 ```
 Collections contains an specific `x` item&rarr; 
-```
+```C#
 Assert.That(collection, Does.Contain(x));
 ```
 Collections contains an partially known `x` item&rarr; 
-```
+```C#
 Assert.That(collection, Has.Exactly(1)
 	  .Property("PropertyName").EqualTo("x")
 	  .And
