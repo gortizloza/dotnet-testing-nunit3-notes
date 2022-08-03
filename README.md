@@ -71,7 +71,7 @@ Assert.That(a, Is.EqualTo(b));
 
 Points to the same object in memory (Reference equality):
 ``` C#
-var a = LoanTerm(2);
+var a = new LoanTerm(2);
 var b = a;
 Assert.That(a, Is.SameAs(b)); 
 // Will pass
